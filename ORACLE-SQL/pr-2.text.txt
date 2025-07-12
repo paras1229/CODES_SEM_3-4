@@ -1,0 +1,62 @@
+SQL>  create table library(bid number (5) primary key,bname varchar(30),bprice long);
+
+Table created.
+
+SQL> insert into library(bid,bname,bprice)values(1,'c++',100);
+
+1 row created.
+
+SQL>  insert into library(bid,bname,bprice)values(2,'oracle',1200);
+
+1 row created.
+
+SQL>  insert into library(bid,bname,bprice)values(3,'cms',100);
+
+1 row created.
+
+SQL>  insert into library(bid,bname,bprice)values(4,'php',500);
+
+1 row created.
+
+SQL> select * from library;
+
+       BID BNAME                          BPRICE
+---------- ------------------------------ --------------------------------------------------------------------------------
+         1 c++                            100
+         2 oracle                         1200
+         3 cms                            100
+         4 php                            500
+
+SQL>  create table student(sid number (5) primary key,bid number (5),sname varchar(30),sclass varchar(30),constraint fk foreign key (bid) references library (bid));
+
+Table created.
+
+SQL>  insert into student(sid,bid,sname,sclass)values(1,1,'prince','bca');
+
+1 row created.
+
+SQL>  insert into student(sid,bid,sname,sclass)values(2,1,'paras','bca');
+
+1 row created.
+
+SQL>  insert into student(sid,bid,sname,sclass)values(3,3,'raj','bca');
+
+1 row created.
+
+SQL>  insert into student(sid,bid,sname,sclass)values(4,4,'keval','bca');
+
+1 row created.
+
+SQL>  insert into student(sid,bid,sname,sclass)values(5,2,'kishan','bca');
+
+1 row created.
+
+SQL> select * from student;
+
+       SID        BID SNAME                          SCLASS
+---------- ---------- ------------------------------ ------------------------------
+         1          1 prince                         bca
+         2          1 paras                          bca
+         3          3 raj                            bca
+         4          4 keval                          bca
+         5          2 kishan                         bca
