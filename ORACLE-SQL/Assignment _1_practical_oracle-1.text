@@ -1,0 +1,28 @@
+SQL> create table supplier(sno number (5) primary key, sname varchar(30),scity varchar(30));
+
+Table created.
+
+SQL> insert into supplier(sno,sname,scity)values(1,'prince','dhoraji');
+
+1 row created.
+
+SQL> insert into supplier(sno,sname,scity)values(2,'paras','dhoraji');
+
+1 row created.
+
+SQL> insert into supplier(sno,sname,scity)values(3,'raj','dhoraji');
+
+1 row created.
+
+SQL> insert into supplier(sno,sname,scity)values(4,'keval','upleta');
+
+1 row created.
+
+SQL> select * from supplier;
+
+       SNO SNAME                          SCITY
+---------- ------------------------------ ------------------------------
+         1 prince                         dhoraji
+         2 paras                          dhoraji
+         3 raj                            dhoraji
+         4 keval                          upleta
