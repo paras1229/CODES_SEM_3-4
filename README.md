@@ -1,3 +1,4 @@
-# Sem_3_programs
-ALERT ::::: DO NOT DOWNLOAD CPP FILES THIS FOLDER IS UNDER CONSTRUCTION.
-VERY SOON NEW FOLDER "UNIT-1 CPP CODES" AND "UNIT-2 CPP CODES" WILL PROCESSING...
+# SEM 3 programs of C++ amd Oracle
+Uploaded by Paras.
+C++ direct download all codes as ZIP file.
+step 1 : tap the "CODES_CPP" or "ORACLE
