@@ -1,2 +1,3 @@
 # Sem_3_programs
-All programs, examples, projects, softwares direct link ( sem 3 )
+ALERT ::::: DO NOT DOWNLOAD CPP FILES THIS FOLDER IS UNDER CONSTRUCTION.
+VERY SOON NEW FOLDER "UNIT-1 CPP CODES" AND "UNIT-2 CPP CODES" WILL PROCESSING...
