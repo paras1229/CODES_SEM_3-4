@@ -25,11 +25,12 @@ class derived : public base
 		{
 			cout << "u is not accessible";
 			cout << "\n value of v " << v;
-			cout << \n value of w " << w;
+			cout << "\n value of w " << w;
 		}
 };
 void main()
 {
+	clrscr();
 	derived  c;
 	c.show();
 }
