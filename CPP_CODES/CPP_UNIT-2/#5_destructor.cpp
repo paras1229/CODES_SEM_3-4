@@ -11,7 +11,7 @@ class sum
 		c = a+b;
 		cout << "sum is " << c << endl;
 	}
-	~sum()
+	~sum()   // destructor as same as class_name and starting with ~ sign
 	{
 		cout << "call destructor" << endl;
 	}
