@@ -8,9 +8,9 @@ void fun()
 		public:
 			void show()
 			{
-				cout << "enter value of a :" << a;
+				cout << "enter value of a :";
 				cin >> a;
-				cout << "enter value of b :" << b;
+				cout << "enter value of b :";
 				cin >> b;
 				cout << a << endl << b;
 			}
