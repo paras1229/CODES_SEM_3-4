@@ -21,6 +21,7 @@ class a
 };
 void main()
 {
+	clrscr();
 	cout << "nested class in c++" << endl;
  	a :: b  obj;
 	obj.getdata(9);
