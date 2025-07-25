@@ -17,6 +17,6 @@ class point
 void main()
 {
   clrscr();
-  point  p1(10,15)
+  point  p1(10,15);
   getch();
 }
