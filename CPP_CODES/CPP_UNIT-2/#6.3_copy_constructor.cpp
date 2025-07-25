@@ -2,7 +2,7 @@
 #include<conio.h>
 class A
 {
-     int x
+     int x;
      public:
         A(int a)
         {
