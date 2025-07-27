@@ -15,7 +15,7 @@ class a
 			}
 			void putdata()
 			{
-				cout << "the number is " << n;
+				cout << "the number is " << num;
 			}
 	};
 };
