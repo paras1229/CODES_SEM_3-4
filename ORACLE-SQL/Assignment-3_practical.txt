@@ -1,0 +1,42 @@
+SQL>  create table student( sno number, sname varchar2(20), scity varchar2(20) );
+
+Table created.
+
+SQL> create sequence m
+      2  start with 1
+      3  increment by 1
+      4  minvalue 1
+      5  maxvalue 10
+      6  cache 5;
+
+sequence created.
+
+SQL>  insert into student values( m.nextval, 'paras', 'dhoraji' );
+
+1 row created.
+
+SQL>  insert into student values( m.nextval, 'raj', 'dhoraji' );
+
+1 row created.
+
+SQL>  insert into student values( m.nextval, 'prince', 'dhoraji' );
+
+1 row created.
+
+SQL>  insert into student values( m.nextval, 'keval', 'upleta' );
+
+1 row created.
+
+SQL>  insert into student values( m.nextval, 'krupa', 'jetpur' );
+
+1 row created.
+ 
+SQL> select * from student;
+
+       SNO SNAME                   SCITY
+---------- ------------------------------ --------------------------------------------------------------------------------
+         1 paras                          dhoraji
+         2 raj                               dhoraji
+         3 prince                         dhoraji
+         4 keval                           upleta
+         5 krupa                          jetpur
