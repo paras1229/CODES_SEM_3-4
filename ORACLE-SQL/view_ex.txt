@@ -23,6 +23,7 @@ View created.
 
 SQL> select *from employees_info;
 
-       ENO ENAME    SALARY
+       ENO ENAME           SALARY
 ---------- --------------- --------------------------------------------------------------------------------
          1 paras           30000
+
