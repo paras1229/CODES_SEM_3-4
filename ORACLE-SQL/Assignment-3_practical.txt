@@ -33,10 +33,10 @@ SQL>  insert into student values( m.nextval, 'krupa', 'jetpur' );
  
 SQL> select * from student;
 
-       SNO SNAME                   SCITY
+       SNO SNAME                          SCITY
 ---------- ------------------------------ --------------------------------------------------------------------------------
          1 paras                          dhoraji
-         2 raj                               dhoraji
+         2 raj                            dhoraji
          3 prince                         dhoraji
-         4 keval                           upleta
+         4 keval                          upleta
          5 krupa                          jetpur
