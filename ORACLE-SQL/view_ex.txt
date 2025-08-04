@@ -1,0 +1,28 @@
+SQL> create table employees ( eno number(10), ename varchar2(15), salary long );
+
+Table created.
+
+SQL> insert into employees values ( 1, 'paras' , 30000 );
+
+1 row created.
+
+SQL> insert into employees values ( 2, 'raj' , 35000 );
+
+1 row created.
+
+SQL> insert into employees values ( 3, 'prince' , 45000 );
+
+1 row created.
+
+SQL> create view employees_info as
+  2  select eno,ename,salary
+  3  from employees
+  4  where eno=1;
+
+View created.
+
+SQL> select *from employees_info;
+
+       ENO ENAME    SALARY
+---------- --------------- --------------------------------------------------------------------------------
+         1 paras           30000
