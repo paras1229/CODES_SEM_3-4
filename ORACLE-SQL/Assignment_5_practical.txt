@@ -1,0 +1,66 @@
+SQL>  create cluster c1(dno number(5));
+
+Cluster created.
+
+SQL> create index c2 on cluster c1;
+
+Index created.
+
+SQL> create table dept(dno number(5),dname varchar2(20)) cluster c1(dno);
+
+Table created.
+
+SQL> create table emp1(eno number(5),ename varchar2(20),dno number(5)) cluster c1(dno);
+
+Table created.
+
+SQL> insert into dept1 values(1,'Sales');
+
+1 row created.
+
+SQL> insert into dept1 values(2,'Management');
+
+1 row created.
+
+SQL> insert into dept1 values(3,'Account');
+
+1 row created.
+
+SQL> insert into dept1 values(4,'Resource Management');
+
+1 row created.
+
+SQL> insert into emp1 values(1,'Employee1',1);
+
+1 row created.
+
+SQL> insert into emp1 values(2,'Employee2',2);
+
+1 row created.
+
+SQL> insert into emp1 values(3,'Employee3',3);
+
+1 row created.
+
+SQL> insert into emp1 values(4,'Employee4',4);
+
+1 row created.
+
+SQL> select rowid,dno,dname from dept1;
+
+ROWID                     DNO ename
+------------------ ---------- --------------------
+AAAS26AABAAAifBAAA          1 Sales
+AAAS26AABAAAifCAAA          2 Mangagement
+AAAS26AABAAAifDAAA          3 Account
+AAAS26AABAAAifEAAA          4 Resouce Management
+
+SQL> select rowid,eno,ename,dno from emp1;
+
+ROWID                     ENO ENAME                       DNO
+------------------ ---------- -------------------- ----------
+AAAS26AABAAAifBAAA          1 Rakesh                        1
+AAAS26AABAAAifCAAA          2 Rajesh                        2
+AAAS26AABAAAifDAAA          3 Rahul                         3
+AAAS26AABAAAifEAAA          4 Raju                          4
+
