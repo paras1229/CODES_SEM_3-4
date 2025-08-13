@@ -1,0 +1,109 @@
+SQL> connect /as sysdba;
+
+Connected.
+
+SQL> create user u1 identified by gkck;
+
+User created.
+
+SQL> create user u2 identified by gkck;
+
+User created.
+
+SQL> conn /as sysdba;
+
+Connected.
+
+SQL> grant create session to u1;
+
+Grant succeeded.
+
+SQL> grant create table to u1;
+
+Grant succeeded.
+
+SQL> grant unlimited  tablespace to u1;
+
+Grant succeeded.
+
+SQL> conn u1/gkck;
+
+Connected.
+
+SQL> select  * from tab;
+
+no rows selected
+
+SQL> create table emp(empno number(5) primary key,ename varchar2(40));
+
+Table created.
+
+SQL> desc emp;
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                   NOT   NULL NUMBER(5)
+ ENAME                                              VARCHAR2(40)
+
+SQL> insert into emp values(1,'Diler');
+
+1 row created.
+
+SQL> insert into emp values(2,'Ravi');
+
+1 row created.
+
+SQL> select * from emp;
+
+     EMPNO ENAME
+---------- ----------------------------------------
+         1 Diler
+         2 Ravi
+
+
+SQL> conn /as sysdba;
+
+Connected.
+
+SQL> grant create session to u2;
+
+Grant succeeded.
+
+SQL> grant create table to u2;
+
+Grant succeeded.
+
+SQL> grant unlimited tablespace to u2;
+
+Grant succeeded.
+
+SQL> conn u2/gkck;
+
+Connected.
+
+SQL> conn /as sysdba;
+
+Connected.
+
+SQL> grant create database link to u2;
+
+Grant succeeded.
+
+SQL> conn u2/gkck;
+
+Connected.
+
+SQL> create database link m
+  2  connect to u1
+  3  identified by gkck
+  4  using 'XE';
+
+Database link created.
+
+
+SQL> select * from emp@m;
+
+     EMPNO ENAME
+---------- ----------------------------------------
+         1 Diler
+         2 Ravi
