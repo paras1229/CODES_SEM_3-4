@@ -1,6 +1,6 @@
 /* (1)write a program to perform add, sub, mul, div
    using multiple inheritance.
-NOTE: enter value by user */
+NOTE: int function and get values by user */
 
 #include <iostream.h>
 #include <conio.h>
@@ -65,4 +65,5 @@ void main()
     Total t1;
     t1.display();
     getch();
+
 }
