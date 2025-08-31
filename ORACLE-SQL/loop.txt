@@ -1,0 +1,119 @@
+SQL> set serveroutput on
+SQL> declare
+  2  i number(5);
+  3  begin
+  4  i := 1;
+  5  loop
+  6  i := i + 1;
+  7  if i>=5 then
+  8  exit;
+  9  end if;
+ 10  dbms_output.put_line(i);
+ 11  end loop;
+ 12  end;
+ 13  /
+2
+3
+4
+
+PL/SQL procedure successfully completed.
+
+SQL> declare
+  2  i number(5);
+  3  begin
+  4   for  i in 1..5
+  5  loop
+  6  dbms_output.put_line(i);
+  7  end loop;
+  8  end ;
+  9  /
+1
+2
+3
+4
+5
+
+PL/SQL procedure successfully completed.
+
+SQL> create table customer (cid number(5)primary key,cname varchar2(40),csalary number(5));
+
+Table created.
+
+SQL> desc customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                       NOT NULL NUMBER(5)
+ CNAME                                              VARCHAR2(40)
+ CSALARY                                            NUMBER(5)
+
+SQL> insert into customer values(1,'Diler',5000);
+
+1 row created.
+
+SQL> insert into customer values(2,'Deep',6000);
+
+1 row created.
+
+SQL> insert into customer values(3,'Rajesh',7000);
+
+1 row created.
+
+SQL> select * from customer;
+
+       CID CNAME                                       CSALARY
+---------- ---------------------------------------- ----------
+         1 Diler                                          5000
+         2 Deep                                           6000
+         3 Rajesh                                         7000
+
+SQL> declare
+  2  n  customer.cname%type;
+  3  begin
+  4  select cname into n from customer where cid=1;
+  5  dbms_output.put_line(n);
+  6  end ;
+  7  /
+Diler
+
+PL/SQL procedure successfully completed.
+
+SQL> rf
+SP2-0042: unknown command "rf" - rest of line ignored.
+SQL> ed
+Wrote file afiedt.buf
+
+  1  declare
+  2  n  customer%rowtype;
+  3  begin
+  4  select * into n from customer where cid=1;
+  5  dbms_output.put_line(n.cid);
+  6  dbms_output.put_line(n.cname);
+  7  dbms_output.put_line(n.csalary);
+  8* end ;
+  9  /
+1
+Diler
+5000
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  declare
+  2  n  customer%rowtype;
+  3  begin
+  4  select * into n from customer where cid=1;
+  5  dbms_output.put_line('CUSTOMER ID'||   n.cid);
+  6  dbms_output.put_line('CUSTOMER NAME'||    n.cname);
+  7  dbms_output.put_line('CUSTOMER SALARY' ||    n.csalary);
+  8* end ;
+SQL> /
+CUSTOMER ID1
+CUSTOMER NAMEDiler
+CUSTOMER SALARY5000
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
