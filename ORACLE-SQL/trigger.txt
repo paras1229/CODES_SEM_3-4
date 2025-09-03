@@ -1,0 +1,21 @@
+SQL> create table student1 ( sid number(5), name varchar2(20), marks number(5) );
+
+Table created.
+
+SQL> create table student1backup ( sid number(5), name varchar2(20), marks number(5) );
+
+Table created.
+
+SQL> create or replace trigger bd
+  2  before delete on student1
+  3  for each row
+  4  begin
+  5  insert into student1backup ( sid, name, marks ) values ( :old.sid , :old.name , :old.marks );
+  6  end;
+  7  /
+
+Trigger created.
+
+SQL> delete from student1 where sid=1;
+
+0 rows deleted.
