@@ -1,0 +1,93 @@
+$ mkdir A
+$ cd A
+/A$ mkdir B
+/A$ cd B
+/A/B$ mkdir E
+/A/B$ mkdir F
+/A/B$ cd F
+/A/B/F$ mkdir G
+/A/B/F$ mkdir H
+/A/B/F$ cd ~/A
+/A$ mkdir C
+/A$ cd C
+/A/C$ mkdir I
+/A/C$ cd I
+/A/C/I$ mkdir J
+/A/C/I$ cd J
+/A/C/I/J$ mkdir K
+/A/C/I/J$ mkdir L
+/A/C/I/J$ cd ~/A
+/A$ mkdir D
+/A$ cd D
+/A/D$ mkdir M
+/A/D$ cd M
+/A/D/M$ mkdir N
+/A/D/M$ mkdir O
+/A/D/M$ cd N
+/A/D/M/N$ mkdir R
+/A/D/M/N$ cd R
+/A/D/M/N/R$ mkdir S
+/A/D/M/N/R$ mkdir T
+/A/D/M/N/R$ cd ~/A/D/M
+/A/D/M$ cd O
+/A/D/M/O$ mkdir P
+/A/D/M/O$ cd P
+/A/D/M/O/P$ mkdir Q
+/A/D/M/O/P$ cd ~/A
+/A$ cd ..
+$ ls -R
+.:
+A
+
+./A:
+B  C  D
+
+./A/B:
+E  F
+
+./A/B/E:
+
+./A/B/F:
+G  H
+
+./A/B/F/G:
+
+./A/B/F/H:
+
+./A/C:
+I
+
+./A/C/I:
+J
+
+./A/C/I/J:
+K  L
+
+./A/C/I/J/K:
+
+./A/C/I/J/L:
+
+./A/D:
+M
+
+./A/D/M:
+N  O
+
+./A/D/M/N:
+R
+
+./A/D/M/N/R:
+S  T
+
+./A/D/M/N/R/S:
+
+./A/D/M/N/R/T:
+
+./A/D/M/O:
+P
+
+./A/D/M/O/P:
+Q
+
+./A/D/M/O/P/Q:
+$

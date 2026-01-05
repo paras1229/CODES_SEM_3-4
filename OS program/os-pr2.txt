@@ -1,0 +1,133 @@
+~$ cd A
+~/A$ cat> Afile
+Hello from A file
+~/A$ cd B
+~/A/B$ cat> Bfile
+Hello from B file
+~/A/B$ cd E
+~/A/B/E$ cat> Efile
+Hello from E file
+~/A/B/E$ cd ..
+~/A/B$ cd F
+~/A/B/F$ cat> Ffile
+Hello from F file
+~/A/B/F$ cd G
+~/A/B/F/G$ cat> Gfile
+Hello from G file
+~/A/B/F/G$ cd ..
+~/A/B/F$ cd H
+~/A/B/F/H$ cat> Hfile
+Hello from H file
+~/A/B/F/H$ cd ~/A
+~/A$ cd C
+~/A/C$ cat> Cfile
+Hello from C file
+~/A/C$ cd I
+~/A/C/I$ cat> Ifile
+Hello from I file
+~/A/C/I$ cd J
+~/A/C/I/J$ cat> Jfile
+Hello from J file
+~/A/C/I/J$ cd K
+~/A/C/I/J/K$ cat> Kfile
+Hello from K file
+~/A/C/I/J/K$ cd ..
+~/A/C/I/J$ cd L
+~/A/C/I/J/L$ cat> Lfile
+Hello from L file
+~/A/C/I/J/L$ cd ~/A
+~/A$ cd D
+~/A/D$ cat> Dfile
+Hello from D file
+~/A/D$ cd M
+~/A/D/M$ cat> Mfile
+Hello from M file
+~/A/D/M$ cd N
+~/A/D/M/N$ cat> Nfile
+Hello from N file
+~/A/D/M/N$ cd R
+~/A/D/M/N/R$ cat> Rfile
+Hello from R file
+~/A/D/M/N/R$ cd S
+~/A/D/M/N/R/S$ cat> Sfile
+Hello from S file
+~/A/D/M/N/R/S$ cd ..
+~/A/D/M/N/R$ cd T
+~/A/D/M/N/R/T$ cat> Tfile
+Hello from T file
+~/A/D/M/N/R/T$ cd ~/A/D/M
+~/A/D/M$ cd O
+~/A/D/M/O$ cat> Ofile
+Hello from O file
+~/A/D/M/O$ cd P
+~/A/D/M/O/P$ cat> Pfile
+Hello from P file
+~/A/D/M/O/P$ cd Q
+~/A/D/M/O/P/Q$ cat> Qfile
+Hello from Q file
+~/A/D/M/O/P/Q$ cd ~/A
+~/A$ cd ..
+~$ ls -R
+.:
+A
+
+./A:
+Afile  B  C  D
+
+./A/B:
+Bfile  E  F
+
+./A/B/E:
+Efile
+
+./A/B/F:
+Ffile  G  H
+
+./A/B/F/G:
+Gfile
+
+./A/B/F/H:
+Hfile
+
+./A/C:
+Cfile  I
+
+./A/C/I:
+Ifile  J
+
+./A/C/I/J:
+Jfile  K  L
+
+./A/C/I/J/K:
+Kfile
+
+./A/C/I/J/L:
+Lfile
+
+./A/D:
+Dfile  M
+
+./A/D/M:
+Mfile  N  O
+
+./A/D/M/N:
+Nfile  R
+
+./A/D/M/N/R:
+Rfile  S  T
+
+./A/D/M/N/R/S:
+Sfile
+
+./A/D/M/N/R/T:
+Tfile
+
+./A/D/M/O:
+Ofile  P
+
+./A/D/M/O/P:
+Pfile  Q
+
+./A/D/M/O/P/Q:
+Qfile
+~$
